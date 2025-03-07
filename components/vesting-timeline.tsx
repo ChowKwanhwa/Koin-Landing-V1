@@ -29,14 +29,13 @@ export default function VestingTimeline({ timeline, color }: VestingTimelineProp
   }, [])
 
   const maxMonth = timeline[timeline.length - 1].month || 1
-  const isDynamic = timeline.some((point) => point.cumulative === "Dynamic")
 
   return (
-    <div className="mt-6 sm:mt-8">
+    <div className="mt-4 sm:mt-8">
       <h4 className="mb-3 sm:mb-4 text-base sm:text-lg font-semibold">Vesting Timeline</h4>
       <div className="relative h-32 sm:h-28 mb-6 sm:mb-0">
         {/* Timeline base */}
-        <div className="absolute left-0 top-12 h-1 w-full bg-gray-700" />
+        <div className="absolute left-0 top-12 h-1 w-[95%] bg-gray-700" />
 
         {/* Timeline points */}
         {timeline.map((point, index) => (
@@ -44,20 +43,25 @@ export default function VestingTimeline({ timeline, color }: VestingTimelineProp
             key={index}
             className="absolute flex flex-col items-center"
             style={{
-              left: `${(point.month / maxMonth) * 100}%`,
+              left: `${(point.month / maxMonth) * 95}%`,
               transform: "translateX(-50%)",
             }}
           >
             <div
-              className={`mb-2 whitespace-nowrap text-[10px] sm:text-xs text-gray-400 ${
-                index % 2 === 0 ? "-translate-y-2" : "translate-y-2"
-              }`}
+              className={`mb-2 whitespace-nowrap text-[10px] sm:text-xs text-gray-400 flex flex-col items-center justify-end h-6`}
             >
-              {isMobile && point.label.length > 10 ? point.label.substring(0, 10) + "..." : point.label}
-              {point.label === "Lock End" && (
-                <div className="mt-1 text-[8px] sm:text-[10px]">
-                  <motion.span
-                    className="font-medium"
+              {point.label.includes("CEX Listing") ? (
+                <div className="flex flex-col items-center gap-0.5">
+                  <div>CEX {point.month}</div>
+                  <div className="text-[8px] text-gray-500">Based on listing</div>
+                </div>
+              ) : point.label === "TGE" ? (
+                "TGE"
+              ) : point.label === "Lock End" ? (
+                <div className="relative -translate-y-2">
+                  <div>Lock End</div>
+                  <motion.div
+                    className="absolute left-1/2 -translate-x-1/2 text-[8px] sm:text-[10px] font-medium mt-0.5"
                     style={{
                       color: color,
                     }}
@@ -71,80 +75,35 @@ export default function VestingTimeline({ timeline, color }: VestingTimelineProp
                     }}
                   >
                     Month {point.month}
-                  </motion.span>
+                  </motion.div>
                 </div>
-              )}
-              {isDynamic && point.label.includes("CEX") && (
-                <div className="mt-1 text-[8px] sm:text-[10px] text-gray-500">Based on listing</div>
+              ) : (
+                point.label
               )}
             </div>
             <div
-              className={`z-10 h-2 w-2 sm:h-3 sm:w-3 rounded-full ${
-                point.cumulative === "Dynamic" ? "animate-pulse" : ""
-              }`}
+              className={`z-10 h-2 w-2 sm:h-3 sm:w-3 rounded-full`}
               style={{ backgroundColor: color }}
             />
             <div
-              className={`mt-6 whitespace-nowrap text-[10px] sm:text-xs font-medium ${
-                index % 2 === 0 ? "translate-y-2" : "-translate-y-2"
-              }`}
+              className={`mt-6 whitespace-nowrap text-[10px] sm:text-xs font-medium`}
             >
               {typeof point.cumulative === "number"
                 ? `${point.cumulative}%`
-                : point.cumulative === "Dynamic"
-                  ? "Based on CEX"
-                  : point.cumulative}
+                : point.cumulative}
             </div>
           </div>
         ))}
 
         {/* Progress indicator */}
-        {!isDynamic && (
-          <div
-            className="absolute left-0 top-12 h-1"
-            style={{
-              width: `${typeof timeline[0].cumulative === "number" ? timeline[0].cumulative : 0}%`,
-              backgroundColor: color,
-            }}
-          />
-        )}
-
-        {/* Dynamic release indicator */}
-        {isDynamic && (
-          <motion.div
-            className="absolute left-0 top-12 h-1"
-            style={{
-              width: timeline[0].cumulative === 0 ? "0%" : "2%",
-              backgroundColor: color,
-            }}
-          >
-            <motion.div
-              className="absolute right-0 h-full w-full"
-              style={{
-                background: `linear-gradient(to right, ${color}, transparent)`,
-                opacity: 0.3,
-              }}
-              animate={{
-                opacity: [0.3, 0.6, 0.3],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
-              }}
-            />
-          </motion.div>
-        )}
-
-        {/* Dynamic timeline note */}
-        {isDynamic && (
-          <div className="absolute -bottom-6 left-0 right-0 text-center text-[10px] sm:text-xs text-gray-400">
-            Release schedule is dynamic and based on{" "}
-            {timeline[0].label.includes("CEX") ? "CEX listing requirements" : "market needs"}
-          </div>
-        )}
+        <div
+          className="absolute left-0 top-12 h-1"
+          style={{
+            width: `${typeof timeline[0].cumulative === "number" ? (timeline[0].cumulative * 0.95) : 0}%`,
+            backgroundColor: color,
+          }}
+        />
       </div>
     </div>
   )
 }
-

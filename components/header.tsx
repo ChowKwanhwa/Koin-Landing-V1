@@ -13,7 +13,7 @@ const navigation = [
   { name: "EEMS", href: "#eems" },
 ]
 
-const MotionLink = motion(Link)
+const MotionLink = motion.create(Link)
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -55,6 +55,7 @@ export default function Header() {
                   alt="KOIN Logo"
                   width={120}
                   height={120}
+                  priority={true}
                   className="h-12 w-auto transition-transform duration-300 hover:scale-105"
                 />
               </Link>
@@ -123,10 +124,14 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
-                className="inline-flex items-center justify-center rounded-lg p-2 text-gray-400 transition-all hover:bg-white/10 hover:text-white focus:outline-none"
+                className="inline-flex items-center justify-center rounded-lg p-2 transition-all hover:bg-white/10 hover:text-[#FFD700] focus:outline-none"
               >
                 <span className="sr-only">Open main menu</span>
-                <motion.div animate={{ rotate: isOpen ? 90 : 0 }} transition={{ duration: 0.2 }}>
+                <motion.div 
+                  animate={{ rotate: isOpen ? 90 : 0 }} 
+                  transition={{ duration: 0.2 }}
+                  className="text-[#FFD700]"
+                >
                   {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                 </motion.div>
               </button>
