@@ -34,7 +34,7 @@ export default function Hero() {
                 {/* Portrait Image */}
                 <div className="relative h-full w-full">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20250307082647-JbVaqSZDuUw9172Si2Fa0uMPbff3TS.png"
+                    src="/profile.png"
                     alt="Chanasnun Kajornphuwapong"
                     fill
                     className="object-cover"
