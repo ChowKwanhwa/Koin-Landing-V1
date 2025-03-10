@@ -11,7 +11,11 @@ const profiles = [
     name: "Chanasnun Kajornphuwapong",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Mr%20Nine%20%285%29.jpg-mxgTFk84pzDGnnPpvsRUyGA7i4aPF8.jpeg",
-    titles: ["President of PEACE Alliance", "Co-founder of Music World Cup", "Visionary Leader in African Development"],
+    titles: [
+      "Founder President of the PEACE Alliance (Special Consultative Status to UN ECOSOC)",
+      "Founder of the African EEMS",
+      "Co-founder of Music World Cup"
+    ],
     quote: "Transforming Africa through digital innovation and sustainable development",
     theme: "from-blue-600/20 to-blue-400/20",
   },
@@ -177,4 +181,3 @@ export default function Leadership() {
     </section>
   )
 }
-

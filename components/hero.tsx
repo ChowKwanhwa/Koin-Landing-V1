@@ -74,11 +74,12 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-2xl font-medium text-white/90 sm:text-3xl"
+                className="space-y-2 text-2xl font-medium text-white/90 sm:text-3xl"
               >
-                Under the Visionary Leadership of{" "}
+                <span className="block text-white/80">Under the Visionary Leadership of</span>
+                <br />
                 <span
-                  className="relative font-semibold"
+                  className="relative block font-semibold"
                   style={{
                     color: "#FFD700",
                     textShadow:
@@ -103,12 +104,41 @@ export default function Hero() {
                   </motion.span>
                 </span>
               </motion.h2>
-              <p className="text-xl text-gray-400">President of PEACE Alliance & Co-founder of Music World Cup</p>
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="relative mt-4 text-lg tracking-wide text-gray-300/90"
+              >
+                <span className="relative">
+                  <span className="absolute -inset-1 block rounded-lg bg-gradient-to-r from-white/5 to-transparent"></span>
+                  <span className="relative">
+                    Founder President of the{" "}
+                    <span className="bg-gradient-to-r from-blue-300 to-blue-100 bg-clip-text font-semibold text-transparent">
+                      PEACE Alliance
+                    </span>
+                  </span>
+                </span>
+                {" "}
+                <span className="text-gray-400">
+                  (Special Consultative Status to UN ECOSOC)
+                </span>
+                {" "}&{" "}
+                <span className="relative">
+                  <span className="absolute -inset-1 block rounded-lg bg-gradient-to-r from-white/5 to-transparent"></span>
+                  <span className="relative">
+                    Founder of the{" "}
+                    <span className="bg-gradient-to-r from-blue-300 to-blue-100 bg-clip-text font-semibold text-transparent">
+                      African EEMS
+                    </span>
+                  </span>
+                </span>
+              </motion.p>
             </div>
             <div className="flex flex-wrap gap-6">
               <Button
                 size="lg"
-                className="relative h-14 overflow-hidden bg-gradient-to-r from-white via-[#FFD700] to-[#FFD700] text-lg font-semibold text-black transition-all hover:scale-105"
+                className="relative h-14 w-[320px] overflow-hidden bg-gradient-to-r from-white via-[#FFD700] to-[#FFD700] text-lg font-semibold text-black transition-all hover:scale-105"
               >
                 <motion.span
                   className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0"
@@ -124,7 +154,10 @@ export default function Hero() {
                 <Handshake className="mr-2 h-5 w-5" />
                 Join the African Renaissance
               </Button>
-              <Button size="lg" className="h-14 bg-[#2563EB] text-lg font-semibold text-white hover:bg-[#2563EB]/90">
+              <Button 
+                size="lg" 
+                className="h-14 w-[320px] bg-[#2563EB] text-lg font-semibold text-white hover:bg-[#2563EB]/90"
+              >
                 <Globe className="mr-2 h-5 w-5" />
                 Explore the Vision
               </Button>

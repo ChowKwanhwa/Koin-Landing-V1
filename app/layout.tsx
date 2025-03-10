@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   description: 'KOIN is revolutionizing African finance through blockchain technology, providing innovative financial solutions and fostering economic growth across the continent.',
   keywords: ['KOIN', 'African Finance', 'Blockchain', 'Cryptocurrency', 'DeFi', 'Financial Innovation'],
   authors: [{ name: 'KOIN Team' }],
+  icons: {
+    icon: '/G-6.svg',
+    shortcut: '/G-6.svg',
+    apple: '/G-6.svg',
+  },
   openGraph: {
     title: 'KOIN - The Future of African Finance',
     description: 'KOIN is revolutionizing African finance through blockchain technology, providing innovative financial solutions and fostering economic growth across the continent.',
