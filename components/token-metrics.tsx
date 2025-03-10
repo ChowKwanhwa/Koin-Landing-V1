@@ -175,20 +175,21 @@ const vestingData = [
     name: "Seed Round",
     percentage: "2%",
     tokenAmount: "540M KOIN",
-    tgeRelease: "10%",
-    initialReleaseAmount: "54M KOIN",
-    lockPeriod: "0 months",
+    tgeRelease: "0%",
+    initialReleaseAmount: "0 KOIN",
+    lockPeriod: "6 months",
     vestingDuration: "24 months",
-    monthlyRelease: "3.75%",
-    initialCirculation: "54M KOIN",
-    valueAtTge: "$27M",
+    monthlyRelease: "4.17%",
+    initialCirculation: "0 KOIN",
+    valueAtTge: "$0",
     color: "#38BDF8",
     timeline: [
-      { month: 0, label: "TGE", release: 10, cumulative: 10 },
-      { month: 6, label: "Month 6", release: 3.75, cumulative: 32.5 },
-      { month: 12, label: "Month 12", release: 3.75, cumulative: 55 },
-      { month: 18, label: "Month 18", release: 3.75, cumulative: 77.5 },
-      { month: 24, label: "Month 24", release: 3.75, cumulative: 100 },
+      { month: 0, label: "TGE", release: 0, cumulative: 0 },
+      { month: 6, label: "Lock End", release: 0, cumulative: 0 },
+      { month: 12, label: "Month 12", release: 4.17, cumulative: 25 },
+      { month: 18, label: "Month 18", release: 4.17, cumulative: 50 },
+      { month: 24, label: "Month 24", release: 4.17, cumulative: 75 },
+      { month: 30, label: "Month 30", release: 4.17, cumulative: 100 },
     ],
   },
   {
@@ -196,20 +197,21 @@ const vestingData = [
     name: "Series A",
     percentage: "3%",
     tokenAmount: "810M KOIN",
-    tgeRelease: "15%",
-    initialReleaseAmount: "121.5M KOIN",
-    lockPeriod: "0 months",
-    vestingDuration: "18 months",
-    monthlyRelease: "4.72%",
-    initialCirculation: "121.5M KOIN",
-    valueAtTge: "$60.75M",
+    tgeRelease: "0%",
+    initialReleaseAmount: "0 KOIN",
+    lockPeriod: "3 months",
+    vestingDuration: "36 months",
+    monthlyRelease: "2.78%",
+    initialCirculation: "0 KOIN",
+    valueAtTge: "$0",
     color: "#FB923C",
     timeline: [
-      { month: 0, label: "TGE", release: 15, cumulative: 15 },
-      { month: 4, label: "Month 4", release: 4.72, cumulative: 33.88 },
-      { month: 9, label: "Month 9", release: 4.72, cumulative: 57.48 },
-      { month: 14, label: "Month 14", release: 4.72, cumulative: 81.08 },
-      { month: 18, label: "Month 18", release: 4.72, cumulative: 100 },
+      { month: 0, label: "TGE", release: 0, cumulative: 0 },
+      { month: 3, label: "Lock End", release: 0, cumulative: 0 },
+      { month: 12, label: "Month 12", release: 2.78, cumulative: 25 },
+      { month: 24, label: "Month 24", release: 2.78, cumulative: 50 },
+      { month: 36, label: "Month 36", release: 2.78, cumulative: 75 },
+      { month: 39, label: "Month 39", release: 2.78, cumulative: 100 },
     ],
   },
   {
@@ -418,9 +420,9 @@ export default function TokenMetrics() {
           className="mb-4 grid gap-4 sm:gap-6 md:grid-cols-3"
         >
           {[
-            { value: "583.2M KOIN", label: "Initial Circulating Supply" },
+            { value: "432M KOIN", label: "Initial Circulating Supply" },
             { value: "$0.5", label: "TGE Price" },
-            { value: "$291.6M", label: "Initial Market Cap" },
+            { value: "$216M", label: "Initial Market Cap" },
           ].map((item, index) => (
             <div
               key={index}
@@ -439,7 +441,7 @@ export default function TokenMetrics() {
           viewport={{ once: true }}
           className="mb-12 sm:mb-16 text-center text-base sm:text-lg text-gray-400"
         >
-          2.16% of Total Supply
+          1.6% of Total Supply
         </motion.div>
 
         {/* Vesting Schedule */}

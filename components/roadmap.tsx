@@ -83,9 +83,9 @@ export default function Roadmap() {
 
                 {/* Content - Adjusted padding for mobile */}
                 <div
-                  className={`relative rounded-2xl bg-white/5 p-6 pl-12 md:pl-6 md:ml-auto md:w-[90%] ${
-                    index % 2 ? "md:order-first md:mr-auto md:ml-0" : ""
-                  }`}
+                  className={`relative rounded-2xl bg-white/5 p-6 pl-12 md:pl-6 ${
+                    index % 2 ? "md:ml-0 md:order-first md:mr-auto" : "md:ml-auto"
+                  } md:w-[90%]`}
                 >
                   <div className="mb-4">
                     <h3 className="text-xl font-bold text-blue-400">{phase.title}</h3>
@@ -108,4 +108,3 @@ export default function Roadmap() {
     </section>
   )
 }
-
