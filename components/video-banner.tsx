@@ -31,9 +31,22 @@ export default function VideoBanner() {
           loop 
           playsInline
           preload="auto"
-          className="absolute left-1/2 top-1/2 h-full w-auto min-w-full -translate-x-1/2 -translate-y-1/2 object-cover"
+          className="absolute left-1/2 top-1/2 hidden h-full w-auto min-w-full -translate-x-1/2 -translate-y-1/2 object-cover md:block"
         >
           <source src="/video1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Mobile Video */}
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          preload="auto"
+          className="absolute left-1/2 top-1/2 block h-full w-auto min-w-full -translate-x-1/2 -translate-y-1/2 object-cover md:hidden"
+        >
+          <source src="/竖视频1.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </MotionDiv>
