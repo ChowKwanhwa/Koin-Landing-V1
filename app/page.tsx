@@ -8,6 +8,7 @@ import TokenMetrics from "@/components/token-metrics"
 import Benefits from "@/components/benefits"
 import Roadmap from "@/components/roadmap"
 import Footer from "@/components/footer"
+import Endorsement from "@/components/Endorsement"
 import ParticleBackground from "@/components/particle-background"
 
 export default function Page() {
@@ -19,6 +20,7 @@ export default function Page() {
         <VideoBanner />
         <Hero />
         <Vision />
+        <Endorsement />
         <Leadership />
         <Ecosystem />
         <TokenMetrics />
