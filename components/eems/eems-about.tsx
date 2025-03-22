@@ -57,7 +57,7 @@ export default function EemsAbout() {
             viewport={{ once: true }}
           >
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-              <Image src="/placeholder.svg?height=600&width=800" alt="EEMS Vision" fill className="object-cover" />
+              <Image src="/images/mr-nine-agriculture.png" alt="EEMS Vision" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end">
                 <div className="p-6">
                   <div className="text-sm text-[#4CAF50] font-medium mb-2">Leadership</div>
@@ -108,4 +108,3 @@ export default function EemsAbout() {
     </section>
   )
 }
-
