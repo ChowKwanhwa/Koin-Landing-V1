@@ -36,7 +36,7 @@ const phases = [
     period: "2025 Q4-2026",
     items: [
       "SAY Token Mainnet Launch",
-      "Integration of KOIN and SAY Token into Sri Araya Group core economy",
+      "Integration of KOIN into Sri Araya Layer 1 Chain",
       "Full Metaverse Ecosystem Launch",
       "Pan-African Digital Currency Expansion",
       "Initiation of Tokenized Real Estate and Asset-Backed Token projects",

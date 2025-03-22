@@ -22,7 +22,7 @@ const features = [
   {
     icon: LayersIcon,
     title: "Future Technology",
-    description: "Built on Solana with future integration into SAY Token Layer 1 blockchain.",
+    description: "Built on Solana with future integration into Sri Araya Layer 1 blockchain.",
   },
 ]
 

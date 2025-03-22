@@ -3,23 +3,18 @@
 import { motion, useScroll, useTransform } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Building2, Music2, Leaf, Globe, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 const ecosystemItems = [
-  {
-    icon: Building2,
-    title: "PEACE Alliance",
-    description: "Leading the transformation of African nations through digital innovation.",
-    gradient: "from-blue-600/20 via-blue-400/20 to-blue-600/20",
-    iconGradient: "from-blue-600 to-blue-400",
-    delay: 0.1,
-  },
   {
     icon: Music2,
     title: "Music World Cup",
     description: "Revolutionary entertainment platform connecting artists and fans globally.",
     gradient: "from-purple-600/20 via-purple-400/20 to-purple-600/20",
     iconGradient: "from-purple-600 to-purple-400",
-    delay: 0.2,
+    delay: 0.1,
+    showLearnMore: true,
+    href: "/mwc"
   },
   {
     icon: Leaf,
@@ -27,7 +22,9 @@ const ecosystemItems = [
     description: "Sustainable development initiatives protecting our environment.",
     gradient: "from-green-600/20 via-green-400/20 to-green-600/20",
     iconGradient: "from-green-600 to-green-400",
-    delay: 0.3,
+    delay: 0.2,
+    showLearnMore: true,
+    href: "/eems"
   },
   {
     icon: Globe,
@@ -35,7 +32,21 @@ const ecosystemItems = [
     description: "Next-generation blockchain infrastructure for the future of finance.",
     gradient: "from-cyan-600/20 via-cyan-400/20 to-cyan-600/20",
     iconGradient: "from-cyan-600 to-cyan-400",
+    delay: 0.3,
+    showLearnMore: false,
+    comingSoon: true,
+    href: "/say-token"
+  },
+  {
+    icon: Building2,
+    title: "PEACE Alliance",
+    description: "Leading the transformation of African nations through digital innovation.",
+    gradient: "from-blue-600/20 via-blue-400/20 to-blue-600/20",
+    iconGradient: "from-blue-600 to-blue-400",
     delay: 0.4,
+    showLearnMore: false,
+    comingSoon: true,
+    href: "/peace-alliance"
   },
 ]
 
@@ -126,13 +137,23 @@ export default function Ecosystem() {
                 <h3 className="text-xl font-semibold text-white">{item.title}</h3>
                 <p className="text-gray-400">{item.description}</p>
 
-                <motion.button
-                  whileHover={{ x: 5 }}
-                  className="flex items-center text-sm text-blue-400 transition-colors hover:text-blue-300"
-                >
-                  Learn more
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </motion.button>
+                {item.comingSoon && (
+                  <div className="flex items-center">
+                    <span className="text-sm text-gray-500 italic">Coming Soon</span>
+                  </div>
+                )}
+
+                {item.showLearnMore && (
+                  <Link href={item.href}>
+                    <motion.button
+                      whileHover={{ x: 5 }}
+                      className="flex items-center text-sm text-blue-400 transition-colors hover:text-blue-300"
+                    >
+                      Learn more
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </motion.button>
+                  </Link>
+                )}
               </div>
             </motion.div>
           ))}
@@ -178,4 +199,3 @@ export default function Ecosystem() {
     </section>
   )
 }
-

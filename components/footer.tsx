@@ -5,15 +5,10 @@ import Link from "next/link"
 import { Twitter, TextIcon as Telegram, Globe, FileText, Instagram } from "lucide-react"
 
 const links = {
-  about: [
-    { label: "Leadership", href: "#" },
-    { label: "Vision", href: "#" },
-    { label: "Roadmap", href: "#" },
-  ],
   ecosystem: [
-    { label: "Music World Cup", href: "#" },
-    { label: "EEMS Projects", href: "#" },
-    { label: "SAY Token", href: "#" },
+    { label: "Music World Cup", href: "/mwc" },
+    { label: "EEMS Projects", href: "/eems" },
+    { label: "Sri Araya Layer1 Chain", href: "#" },
   ],
   resources: [
     { label: "Documentation", href: "#" },
@@ -76,7 +71,7 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-white/10 bg-black/50 py-16 backdrop-blur-lg">
       <div className="container mx-auto px-4">
-        <div className="mb-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mb-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -152,11 +147,10 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center justify-between space-y-4 border-t border-white/10 pt-8 text-sm text-gray-400 md:flex-row md:space-y-0">
-          <div>© 2025 KOIN. All rights reserved.</div>
+          <div> 2025 KOIN. All rights reserved.</div>
           <div>A Chanasnun Kajornphuwapong Initiative</div>
         </div>
       </div>
     </footer>
   )
 }
-

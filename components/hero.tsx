@@ -135,33 +135,6 @@ export default function Hero() {
                 </span>
               </motion.p>
             </div>
-            <div className="flex flex-wrap gap-6">
-              <Button
-                size="lg"
-                className="relative h-14 w-[320px] overflow-hidden bg-gradient-to-r from-white via-[#FFD700] to-[#FFD700] text-lg font-semibold text-black transition-all hover:scale-105"
-              >
-                <motion.span
-                  className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0"
-                  animate={{
-                    x: ["-200%", "200%"],
-                  }}
-                  transition={{
-                    repeat: Number.POSITIVE_INFINITY,
-                    duration: 2,
-                    ease: "linear",
-                  }}
-                />
-                <Handshake className="mr-2 h-5 w-5" />
-                Join the African Renaissance
-              </Button>
-              <Button 
-                size="lg" 
-                className="h-14 w-[320px] bg-[#2563EB] text-lg font-semibold text-white hover:bg-[#2563EB]/90"
-              >
-                <Globe className="mr-2 h-5 w-5" />
-                Explore the Vision
-              </Button>
-            </div>
           </motion.div>
         </div>
       </div>

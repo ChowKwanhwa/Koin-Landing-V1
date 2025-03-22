@@ -8,9 +8,9 @@ import { Button } from "@/components/ui/button"
 import { Menu, X, ChevronRight } from "lucide-react"
 
 const navigation = [
-  { name: "About Kajornphuwapong", href: "#about" },
-  { name: "MWC", href: "#mwc" },
-  { name: "EEMS", href: "#eems" },
+  { name: "About Kajornphuwapong", href: "/founder" },
+  { name: "MWC", href: "/mwc" },
+  { name: "EEMS", href: "/eems" },
 ]
 
 const MotionLink = motion.create(Link)
@@ -77,11 +77,9 @@ export default function Header() {
                   </span>
                   <motion.div
                     className="absolute inset-0 rounded-lg bg-white/0 transition-colors duration-300 group-hover:bg-[#FFD700]/5"
-                    layoutId="navBackground"
                   />
                   <motion.div
-                    className="absolute bottom-0 left-1/2 h-px w-0 -translate-x-1/2 bg-gradient-to-r from-[#FFD700] via-[#FDB931] to-[#FFD700] transition-all duration-300 group-hover:w-full"
-                    layoutId="navUnderline"
+                    className="absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r from-[#FFD700] via-[#FDB931] to-[#FFD700] transition-all duration-300 group-hover:w-full"
                   />
                 </MotionLink>
               ))}
@@ -97,6 +95,7 @@ export default function Header() {
               <Button
                 size="lg"
                 className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white transition-all hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
+                data-buy-koin
               >
                 <motion.span
                   className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent)]"
@@ -175,6 +174,7 @@ export default function Header() {
                   <Button
                     size="lg"
                     className="relative w-full overflow-hidden bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 text-white"
+                    data-buy-koin
                   >
                     <motion.span
                       className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent)]"
