@@ -10,7 +10,7 @@ const partners = [
   },
   {
     name: "Oracle",
-    logo: "/images/oracle-logo.png",
+    logo: "/images/Oracle-Logo.webp",
   },
   {
     name: "Infront",
@@ -65,4 +65,3 @@ export default function MwcPartners() {
     </section>
   )
 }
-
