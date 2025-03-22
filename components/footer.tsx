@@ -13,7 +13,7 @@ const links = {
   resources: [
     { label: "Documentation", href: "#" },
     { label: "Press Kit", href: "#" },
-    { label: "Partners", href: "#" },
+    { label: "Token Audit", href: "https://beosin.com/audits/KOIN_202503191837.pdf" },
   ],
 }
 
@@ -45,7 +45,7 @@ const socialLinks = [
   },
   {
     icon: FileText,
-    href: "#",
+    href: "/KOIN-WHITEPAPER.pdf",
     label: "Whitepaper",
     hoverColor: "hover:text-gray-300",
   },
