@@ -11,7 +11,7 @@ const links = {
     { label: "Sri Araya Layer 1 Chain", href: "#" },
   ],
   resources: [
-    { label: "Documentation", href: "#" },
+    { label: "Documentation", href: "/KOIN-WHITEPAPER.pdf" },
     { label: "Press Kit", href: "#" },
     { label: "Token Audit", href: "https://beosin.com/audits/KOIN_202503191837.pdf" },
   ],
