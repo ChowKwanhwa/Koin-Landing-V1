@@ -8,7 +8,7 @@ const links = {
   ecosystem: [
     { label: "Music World Cup", href: "/mwc" },
     { label: "EEMS Projects", href: "/eems" },
-    { label: "Sri Araya Layer1 Chain", href: "#" },
+    { label: "Sri Araya Layer 1 Chain", href: "#" },
   ],
   resources: [
     { label: "Documentation", href: "#" },

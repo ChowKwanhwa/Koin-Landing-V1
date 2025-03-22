@@ -28,7 +28,7 @@ const features = [
   },
   {
     icon: Layers,
-    title: "SAY Token Future",
+    title: "Sri Araya Layer 1 Chain Future",
     description: "Upcoming Layer 1 blockchain for Real World Assets",
     gradient: "from-orange-500 to-yellow-500",
     delay: 0.4,

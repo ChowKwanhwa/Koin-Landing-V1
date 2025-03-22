@@ -19,7 +19,7 @@ const stages = [
       process: "Upload tracks through our platform",
       benefits: "Global exposure to industry professionals",
     },
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/mwc-submit.jpg",
   },
   {
     id: "voting",
@@ -34,7 +34,7 @@ const stages = [
       process: "Fans vote daily for their favorites",
       benefits: "Build your global fanbase",
     },
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/mwc-voting.jpg",
   },
   {
     id: "semifinals",
@@ -49,7 +49,7 @@ const stages = [
       process: "Regional competitions and showcases",
       benefits: "Media coverage and industry networking",
     },
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/mwc-semi-final.jpg",
   },
   {
     id: "finals",
@@ -64,7 +64,7 @@ const stages = [
       process: "Live performances in Dubai",
       benefits: "$1M prize + global record deal",
     },
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/mwc-final.jpg",
   },
 ]
 

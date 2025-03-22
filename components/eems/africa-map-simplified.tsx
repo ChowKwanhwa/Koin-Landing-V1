@@ -7,7 +7,7 @@ interface AfricaMapProps {
   highlightSouthern?: boolean
 }
 
-export default function AfricaMapSimplified({ highlightNorthern = false, highlightSouthern = true }: AfricaMapProps) {
+export default function AfricaMapSimplified({ highlightNorthern = false, highlightSouthern = false }: AfricaMapProps) {
   return (
     <div className="relative w-full h-full">
       <svg viewBox="0 0 500 600" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
@@ -19,14 +19,22 @@ export default function AfricaMapSimplified({ highlightNorthern = false, highlig
           </linearGradient>
 
           <linearGradient id="northern-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#1E90FF" stopOpacity="0.7" />
-            <stop offset="100%" stopColor="#1E90FF" stopOpacity="0.3" />
+            <stop offset="0%" stopColor="#4CAF50" stopOpacity="0.9" />
+            <stop offset="100%" stopColor="#4CAF50" stopOpacity="0.4" />
           </linearGradient>
 
           <linearGradient id="southern-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#4CAF50" stopOpacity="0.7" />
-            <stop offset="100%" stopColor="#4CAF50" stopOpacity="0.3" />
+            <stop offset="0%" stopColor="#1E90FF" stopOpacity="0.9" />
+            <stop offset="100%" stopColor="#1E90FF" stopOpacity="0.4" />
           </linearGradient>
+
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
         </defs>
 
         {/* Background globe effect */}
@@ -69,34 +77,36 @@ export default function AfricaMapSimplified({ highlightNorthern = false, highlig
 
         {/* Northern Corridor - horizontal straight line spanning the continent */}
         <motion.path
-          d="M120,200 L380,200"
-          stroke={highlightNorthern ? "url(#northern-gradient)" : "rgba(30, 144, 255, 0.3)"}
-          strokeWidth={highlightNorthern ? "12" : "8"}
+          d="M120,350 L380,350"
+          stroke={highlightNorthern ? "url(#northern-gradient)" : "rgba(76, 175, 80, 0.2)"}
+          strokeWidth={highlightNorthern ? "16" : "8"}
           strokeLinecap="round"
           strokeDasharray="1,0"
+          filter={highlightNorthern ? "url(#glow)" : "none"}
           fill="none"
           initial={{ pathLength: 0, opacity: 0 }}
           animate={{
             pathLength: 1,
             opacity: 1,
-            strokeWidth: highlightNorthern ? 12 : 8,
+            strokeWidth: highlightNorthern ? 16 : 8,
           }}
           transition={{ duration: 1.5, delay: 1 }}
         />
 
         {/* Southern Corridor - horizontal straight line spanning the continent */}
         <motion.path
-          d="M120,350 L380,350"
-          stroke={highlightSouthern ? "url(#southern-gradient)" : "rgba(76, 175, 80, 0.3)"}
-          strokeWidth={highlightSouthern ? "12" : "8"}
+          d="M120,200 L380,200"
+          stroke={highlightSouthern ? "url(#southern-gradient)" : "rgba(30, 144, 255, 0.2)"}
+          strokeWidth={highlightSouthern ? "16" : "8"}
           strokeLinecap="round"
           strokeDasharray="1,0"
+          filter={highlightSouthern ? "url(#glow)" : "none"}
           fill="none"
           initial={{ pathLength: 0, opacity: 0 }}
           animate={{
             pathLength: 1,
             opacity: 1,
-            strokeWidth: highlightSouthern ? 12 : 8,
+            strokeWidth: highlightSouthern ? 16 : 8,
           }}
           transition={{ duration: 1.5, delay: 1.2 }}
         />
@@ -106,27 +116,11 @@ export default function AfricaMapSimplified({ highlightNorthern = false, highlig
           {/* Northern Corridor Label */}
           <motion.rect
             x="390"
-            y="190"
-            width="120"
-            height="30"
-            rx="15"
-            fill={highlightNorthern ? "rgba(30, 144, 255, 0.2)" : "rgba(0, 0, 0, 0.3)"}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 2.2 }}
-          />
-          <motion.text x="450" y="210" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">
-            Northern Corridor
-          </motion.text>
-
-          {/* Southern Corridor Label */}
-          <motion.rect
-            x="390"
             y="340"
             width="120"
             height="30"
             rx="15"
-            fill={highlightSouthern ? "rgba(76, 175, 80, 0.2)" : "rgba(0, 0, 0, 0.3)"}
+            fill={highlightNorthern ? "rgba(76, 175, 80, 0.2)" : "rgba(0, 0, 0, 0.3)"}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 2.2 }}
@@ -134,9 +128,24 @@ export default function AfricaMapSimplified({ highlightNorthern = false, highlig
           <motion.text x="450" y="360" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">
             Southern Corridor
           </motion.text>
+
+          {/* Southern Corridor Label */}
+          <motion.rect
+            x="390"
+            y="190"
+            width="120"
+            height="30"
+            rx="15"
+            fill={highlightSouthern ? "rgba(30, 144, 255, 0.2)" : "rgba(0, 0, 0, 0.3)"}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 2.2 }}
+          />
+          <motion.text x="450" y="210" textAnchor="middle" fill="white" fontSize="12" fontWeight="bold">
+          Northern Corridor
+          </motion.text>
         </motion.g>
       </svg>
     </div>
   )
 }
-

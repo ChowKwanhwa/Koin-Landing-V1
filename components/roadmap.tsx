@@ -21,7 +21,7 @@ const phases = [
     title: "Phase 2 - Integration",
     period: "2025 Q2-Q3",
     items: [
-      "Launch of Sri Araya Tokenomic (SAY Token) Testnet",
+      "Launch of Sri Araya Layer 1 Chain Tokenomic (SAY Token) Testnet",
       "Testing of RWA and Smart Contract functionalities",
       "Integration of African EEMS and MUSIC WORLD CUP@ with SAY Blockchain",
       "Strategic partnerships with governments, central banks, and international organizations",
@@ -35,7 +35,7 @@ const phases = [
     title: "Phase 3 - Development",
     period: "2025 Q4-2026",
     items: [
-      "SAY Token Mainnet Launch",
+      "Sri Araya Layer 1 Chain Mainnet Launch",
       "Integration of KOIN into Sri Araya Layer 1 Chain",
       "Full Metaverse Ecosystem Launch",
       "Pan-African Digital Currency Expansion",

@@ -28,7 +28,7 @@ const ecosystemItems = [
   },
   {
     icon: Globe,
-    title: "SAY Token",
+    title: "Sri Araya Layer 1 Chain",
     description: "Next-generation blockchain infrastructure for the future of finance.",
     gradient: "from-cyan-600/20 via-cyan-400/20 to-cyan-600/20",
     iconGradient: "from-cyan-600 to-cyan-400",
