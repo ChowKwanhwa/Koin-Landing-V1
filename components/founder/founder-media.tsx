@@ -15,16 +15,16 @@ const mediaItems = [
   {
     id: 2,
     category: "photos",
-    title: "African EEMS Launch",
-    description: "With President Alpha Conde announcing the first African EEMS project.",
+    title: "Land Title Deed Ceremony",
+    description: "Receiving the land title deed for the project from the Minister of Forestry of the Republic of Guinea during a press conference at the 23rd Global Warming Conference in Bonn, Germany.",
     thumbnail:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/H.E.%20Alpha%20Conde%2C%20President%20of%20the%20Republic%20of%20Guinea%20and%20President%20of%20the%20African%20Union%2C%20together%20with%20Chanatnan%2C%20announced%20the%20first%20African%20EMS%20project%20at%20the%20COP23%20Climate%20Change%20Conference%20in%20Bonn1.jpg-jBFPdh3liKQKgKlyUNbKybJFXzLigp.jpeg",
   },
   {
     id: 3,
     category: "photos",
-    title: "DRC Project Meeting",
-    description: "Meeting with representatives from the Democratic Republic of Congo.",
+    title: "DRC Delegation Visit",
+    description: "Representatives from President Joseph Kabila of the Democratic Republic of the Congo visited Thailand to discuss the establishment of projects in the Congo DRC.",
     thumbnail:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/A%20representative%20of%20President%20Joseph%20Kabila%20held%20the%20first%20meeting%20with%20Chanasnun%20at%20the%20office%20in%20Thailand%20in%202018%20to%20discuss%20the%20establishment%20of%20The%20African%20EMS%20Project%20in%20the%20Democratic%20Republic%20of%20the%20Cong.jpg-wde5mLcBN89Cud1pR2exueD36QLszX.jpeg",
   },
@@ -129,4 +129,3 @@ export default function FounderMedia() {
     </section>
   )
 }
-

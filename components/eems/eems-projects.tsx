@@ -9,7 +9,7 @@ import AfricaMapSimplified from "./africa-map-simplified"
 const projects = [
   {
     id: "southern",
-    name: "Be Green Southern Corridor",
+    name: "Sri Araya Southern Corridor",
     area: "30 million hectares",
     description:
       "A transformative project spanning multiple countries in Southern Africa, focusing on biomass power generation and carbon sequestration. Also known as 'The Emission Zero Global' with a 50-year concession period.",
@@ -25,7 +25,7 @@ const projects = [
   },
   {
     id: "northern",
-    name: "Be Green Northern Corridor",
+    name: "Sri Araya Northern Corridor",
     area: "300 million hectares",
     description:
       "An ambitious desert transformation initiative across Northern Africa, creating oases and sustainable development zones. Also known as 'The Oasis Project' with a 99-year concession period.",

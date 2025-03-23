@@ -7,8 +7,9 @@ import { Globe, Users, Building, Award } from "lucide-react"
 const features = [
   {
     icon: Globe,
-    title: "UN ECOSOC Connection",
-    description: "Officially recognized and supported by the United Nations Economic and Social Council",
+    title: "Carbon Credit Initiative",
+    description:
+      "Developing innovative carbon credit programs to fund ecological restoration and sustainable development",
     color: "#1E90FF",
   },
   {
@@ -108,3 +109,4 @@ export default function EemsAbout() {
     </section>
   )
 }
+
