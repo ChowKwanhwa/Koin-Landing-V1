@@ -41,7 +41,7 @@ const initiatives = [
     ],
     details:
       "The Northern Corridor extends 7,000 km, focusing on transforming arid regions into productive, sustainable ecosystems through innovative water management and renewable energy.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/oasis.jpg",
     icon: Droplets,
     color: "#009EDB",
     link: "/eems",
@@ -80,7 +80,7 @@ const initiatives = [
     ],
     details:
       "The 2025 event in Thailand will coincide with the 50th anniversary of Thailand-China relations, creating a significant cultural and economic impact through global entertainment.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/mwc.jpg",
     icon: Music,
     color: "#FFD700",
     link: "/mwc",

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { Twitter, TextIcon as Telegram, Globe, FileText, Instagram } from "lucide-react"
+import { Twitter, TextIcon as Globe, FileText, Instagram } from "lucide-react"
 
 const links = {
   ecosystem: [
@@ -36,12 +36,6 @@ const socialLinks = [
     href: "https://www.instagram.com/thekoinop",
     label: "KOIN Instagram",
     hoverColor: "hover:text-pink-500",
-  },
-  {
-    icon: Telegram,
-    href: "#",
-    label: "Telegram",
-    hoverColor: "hover:text-blue-400",
   },
   {
     icon: FileText,
