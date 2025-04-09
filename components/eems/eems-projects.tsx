@@ -102,7 +102,7 @@ export default function EemsProjects() {
 
             {activeProject === "southern" && (
               <div className="inline-block px-4 py-2 rounded-lg bg-[#FFC107]/10 text-[#FFC107] text-sm font-medium">
-                The Emission Zero Global (Concession 50 years)
+                The Emission Zero Global (Concession 99 years)
               </div>
             )}
 
